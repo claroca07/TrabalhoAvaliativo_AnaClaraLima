@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende sua Tatto!</title>
+    <link rel="stylesheet" href="../estilos/layout.css">
+    <link rel="shortcut icon" href="../imagens/tatuagem.ico">
+
+</head>
+
+<body>
+    <section id="container">
+
+        <nav>
+            <header>
+                <figure>
+                    <img src="../imagens/logo.png" alt="Logo" width="120">
+                    <h1>Tatto Studio</h1>
+                </figure>
+            </header>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li class="dropdown" onclick="abrirMenu(event)">
+                    <article>
+                        <p>Mural</p>
+                        <img src="../imagens/seta-direita.png" alt="Seta" width="12" class="arrow">
+                    </article>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="pele-artificial.html">Pele artificial</a>
+                        </li>
+
+                        <li>
+                            <a href="pele-real.html">Pele real</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="./sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="./contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section class="sobre-intro">
+                <article class="card">
+                    <h2>Sobre o Tatto Studio</h2>
+                    <p>O Tatto Studio nasceu para ser um espaço criativo e acolhedor para quem deseja tatuagens com qualidade, segurança e estilo. Nossa missão é transformar ideias em arte na pele com profissionais dedicados e técnica refinada.</p>
+                </article>
+            </section>
+
+            <section class="valores">
+                <header>
+                    <h2>Nossos valores</h2>
+                </header>
+                <article class="card">
+                    <h3>Segurança e higiene</h3>
+                    <p>Utilizamos materiais descartáveis, esterilização certificada e seguimos protocolos rígidos em cada sessão.</p>
+                </article>
+                <article class="card">
+                    <h3>Criação personalizada</h3>
+                    <p>Cada tatuagem é pensada para combinar com seu estilo, seu corpo e sua história pessoal.</p>
+                </article>
+                <article class="card">
+                    <h3>Atendimento especializado</h3>
+                    <p>Nossa equipe oferece orientação desde o conceito até o cuidado pós-tatuagem, garantindo conforto e resultado final impecável.</p>
+                </article>
+            </section>
+
+            <section class="historia">
+                <article class="card">
+                    <h2>Por que escolher o nosso estúdio?</h2>
+                    <p>Com anos de experiência e clientes satisfeitos, somos referência em tatuagens que combinam técnica, criatividade e personalidade. Aqui, você encontra um ambiente seguro e profissional, ideal para fazer sua próxima tattoo.</p>
+                </article>
+            </section>
+
+        </main>
+
+        <aside>
+            <section>
+                <article>
+                    <h3>Me acompanhe nas redes sociais</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/clarocao/" target="_blank">
+                                    Instagram
+                                    <img src="../imagens/insta.png" alt="Instagram" width="16">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/clarocao" target="_blank">
+                                    TikTok
+                                    <img src="../imagens/tiktok.png" alt="TikTok" width="16">
+                                </a>
+                            </li>
+                        </ul>
+                </article>
+                <article>
+                    <h3>
+                        Registros recentes:
+                    </h3>
+                    <figure>
+                        <img src="../imagens/registro-1.jpg" alt="Registro 1" width="100%">
+                        <figcaption>Trabalho recente: tatuagem de flor aquarela</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../imagens/registro-2.jpeg" alt="Registro 2" width="100%">
+                        <figcaption>Trabalho recente: tatuagem de animal em estilo realista</figcaption>
+                    </figure>
+                </article>
+            </section>
+        </aside>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tatto Studio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../scripts/menuDropDown.js"></script>
+
+</body>
+
+</html>
