@@ -24,7 +24,7 @@ body {
 }
 
 main {
-    width: 75%;
+    width: 55%;
     padding: 40px;
 }
 
@@ -135,7 +135,7 @@ nav ul li:hover {
 }
 
 form{
-    margin: 100px;
+    margin: 30px;
     margin-top:30px;
     padding: 20px;
     border-radius: 8px;
@@ -225,6 +225,74 @@ footer {
     color: #D9CBDA;
     padding: 30px;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    #container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px;
+    }
+
+    aside {
+        width: 100%;
+        border-left: none;
+        border-top: 4px solid #9f8080;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .submenu {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    form {
+        margin: 20px;
+    }
+
+    form fieldset {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    #container {
+        flex-direction: row;
+    }
+
+    nav {
+        width: 25%;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    aside {
+        width: 20%;
+    }
 }
 
 .mural{

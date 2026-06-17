@@ -7,7 +7,7 @@
     <title>Tatto</title>
     <link rel="stylesheet" href="../estilos/layout.css">
     <link rel="shortcut icon" href="../imagens/tatuagem.ico">
-    
+
 </head>
 
 <body>
@@ -26,6 +26,7 @@
                 </li>
 
                 <li class="dropdown" onclick="abrirMenu(event)">
+
                     <article>
                         <p>Mural</p>
                         <img src="../imagens/seta-direita.png" alt="Seta" width="12" class="arrow">
@@ -77,7 +78,7 @@
                     <label for="lbhora">Horário:</label>
                     <input type="time" id="iphora" name="hora" required>
 
-                    
+
                     <label for="lbmensagem">Mensagem:</label>
                     <textarea id="ipmensagem" name="mensagem" rows="4"></textarea>
 
@@ -85,7 +86,7 @@
                         <label for="lbgostaria">Gostaria de receber novidades por email?</label>
                         <input type="checkbox" id="ipgostaria" name="gostaria">
                     </article>
-                    
+
                     <article class="form-actions">
                         <button type="button" onclick="enviarDados(event)">Enviar</button>
                         <button type="reset">Limpar</button>
@@ -137,6 +138,7 @@
     <footer>
         <p>&copy; 2024 Tatto Studio. Todos os direitos reservados.</p>
     </footer>
+    <script src="../scripts/menuDropDown.js"></script>
     <script src="../scripts/enviarDados.js"></script>
 </body>
 
