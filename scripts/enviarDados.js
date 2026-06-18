@@ -25,7 +25,7 @@ function enviarDados(event){
         alert("Por favor, escreva uma Mensagem.");
         return;
     }
-    
+
     let ehTatuagem = assunto.toLowerCase() === "tatuagem";
 
     if (ehTatuagem) {
@@ -50,24 +50,30 @@ function enviarDados(event){
         resposta.style.display = "block";
         
         resposta.innerHTML = `
-            <h2>✓ Formulário Enviado com Sucesso!</h2>
-            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 15px; color: #333;">
-                <p><strong>Nome:</strong> ${nome}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Serviço:</strong> ${assunto.charAt(0).toUpperCase() + assunto.slice(1)}</p>
-                
+        <h2>✓ Formulário Enviado com Sucesso!</h2>
+        <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 15px; color: #333;">
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Serviço:</strong> ${assunto.charAt(0).toUpperCase() + assunto.slice(1)}</p>
+        
                 ${ehTatuagem ? `
                     <p><strong>Data Solicitada:</strong> ${dataFormatada}</p>
                     <p><strong>Horário:</strong> ${hora}</p>
                 ` : ''}
-
+                
                 <p><strong>Novidades por email:</strong> ${gostaria ? 'Sim' : 'Não'}</p>
                 <p><strong>Mensagem:</strong> ${mensagem}</p>
                 <p style="margin-top: 20px; color: #666; font-style: italic;">Obrigado pelo contato! Entraremos em contato em breve.</p>
-            </div>
+                </div>
         `;
     }
 }
+
+function limparTela(event){
+    let resposta = document.getElementById("resposta");
+    resposta.innerHTML = '';
+}
+
 
 document.getElementById("ipassunto").addEventListener("change", function() {
     let blocoTatto = document.getElementById("bloco-tatto"); 
