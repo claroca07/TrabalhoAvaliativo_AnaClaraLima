@@ -21,21 +21,29 @@ function enviarDados(event){
         alert("Por favor, selecione um Serviço.");
         return;
     }
-    if (!data) {
-        alert("Por favor, selecione uma Data.");
-        return;
-    }
-    if (!hora) {
-        alert("Por favor, selecione um Horário.");
-        return;
-    }
     if (!mensagem) {
         alert("Por favor, escreva uma Mensagem.");
         return;
     }
+    
+    let ehTatuagem = assunto.toLowerCase() === "tatuagem";
 
-    let dataObj = new Date(data);
-    let dataFormatada = dataObj.toLocaleDateString('pt-BR');
+    if (ehTatuagem) {
+        if (!data) {
+            alert("Por favor, selecione uma Data para a sua tatuagem.");
+            return;
+        }
+        if (!hora) {
+            alert("Por favor, selecione um Horário para a sua tatuagem.");
+            return;
+        }
+    }
+
+    let dataFormatada = "Não informada";
+    if (data) {
+        let partesData = data.split('-'); 
+        dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`; 
+    }
 
     let resposta = document.getElementById("resposta");
     if (resposta) {
@@ -43,17 +51,32 @@ function enviarDados(event){
         
         resposta.innerHTML = `
             <h2>✓ Formulário Enviado com Sucesso!</h2>
-            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 15px;">
+            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 15px; color: #333;">
                 <p><strong>Nome:</strong> ${nome}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Serviço:</strong> ${assunto.charAt(0).toUpperCase() + assunto.slice(1)}</p>
-                <p><strong>Data Solicitada:</strong> ${dataFormatada}</p>
-                <p><strong>Horário:</strong> ${hora}</p>
+                
+                ${ehTatuagem ? `
+                    <p><strong>Data Solicitada:</strong> ${dataFormatada}</p>
+                    <p><strong>Horário:</strong> ${hora}</p>
+                ` : ''}
+
                 <p><strong>Novidades por email:</strong> ${gostaria ? 'Sim' : 'Não'}</p>
                 <p><strong>Mensagem:</strong> ${mensagem}</p>
                 <p style="margin-top: 20px; color: #666; font-style: italic;">Obrigado pelo contato! Entraremos em contato em breve.</p>
             </div>
         `;
     }
-
 }
+
+document.getElementById("ipassunto").addEventListener("change", function() {
+    let blocoTatto = document.getElementById("bloco-tatto"); 
+    
+    if (blocoTatto) {
+        if (this.value.toLowerCase() === "tatuagem") {
+            blocoTatto.style.display = "block"; 
+        } else {
+            blocoTatto.style.display = "none";  
+        }
+    }
+});
